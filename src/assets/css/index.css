@@ -1,0 +1,209 @@
+/* RESET */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/* UTILS */
+
+.debug,
+.debug *{
+    min-height: 50px;
+    padding: 5px;
+    background-color: rgba(255, 0, 0, 0.219);
+    border: 1px dashed red;
+}
+
+.container{
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.wrapper{
+    min-height: 100vh;  /* l'unita di misura "vh" va ad indicare una parte della finestra che visualizziamo sul monitor. 1vh è un centesimo di finestra, quindi 100vh è tutta la finestra. con il "min" avanti gli diciamo di prendere ALMENO tutta la finestra. se la pagina dovra scrollare con min-height non avremo problemi */
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+[class*='col']{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.col-1-2{
+    width: calc(100% / 2);
+}
+
+.col-1-3{
+    width: calc(100% / 3);
+}
+
+.col-1-4{
+    width: calc(100% / 4);
+}
+
+.col-1-5{
+    width: calc(100% / 5);
+}
+
+/* FORM */
+form {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form input,
+form textarea,
+form label,
+form select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 4px #007BFF;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal.jsx */
+
+.modale-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modale {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 6px;
+  max-width: 400px;
+  margin: 20px auto; /*centra il box orizzontalmente */
+}
+
+.modale-title {
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.modale-content {
+  margin: 12px 0;
+}
+
+.modale-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.button-close {
+  padding: 6px 12px;
+  border: 1px solid #999;
+  background-color: #eee;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-confirm {
+  padding: 6px 12px;
+  border: none;
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* INPUt */
+
+input[type="text"] {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 200px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
